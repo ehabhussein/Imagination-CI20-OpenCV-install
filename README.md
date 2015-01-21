@@ -38,5 +38,5 @@ To get webcam support:
   g- vim /etc/ld.so.conf.d/opencv.conf
     g.1- /usr/local/lib
     g.2- save and exit ":wq"
-    g.3 sudo ldconfig
+    g.3- sudo ldconfig
     
