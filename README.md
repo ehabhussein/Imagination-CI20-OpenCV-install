@@ -1,4 +1,4 @@
-# Imagination-CI20-OpenCV-install: C++ & no python support
+# Imagination-CI20-OpenCV-install (opencv-2.4.10 as of this writting 3.0 beta untested): C++ & no python support
 Out of the Box the default debian image doesnt support webcams thus no /dev/video0
 
 To get webcam support:
