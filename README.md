@@ -12,22 +12,22 @@ To get webcam support:
   
   c- power on
 
-3- prepare you debian image (apt-get magic)
+3- prepare you debian image
   a- dpkg-reconfigure locales ; add en_US.utf8 remove others ; add to .bashrc ->
     a.1 export LC_ALL=en_US.utf8
         export LANGUAGE=en_US.utf8
     
-  b- sudo apt-get install -y build-essential cmake pkg-config libpng12-0 libpng12-dev libpng++-dev libpng3 libpnglite-dev zlib1g-dbg zlib1g zlib1g-dev pngtools libtiff4-dev libtiff4 libtiffxx0c2 libtiff-tools libjpeg8 libjpeg8-dev libjpeg8-dbg libjpeg-progs ffmpeg libavcodec-dev libavcodec53 libavformat53 libavformat-dev libgstreamer0.10-0-dbg libgstreamer0.10-0  libgstreamer0.10-dev libxine1-ffmpeg  libxine-dev libxine1-bin libunicap2 libunicap2-dev libdc1394-22-dev libdc1394-22 libdc1394-utils swig libv4l-0 libv4l-dev libgtk2.0-dev pkg-config libogg-dev libopencore-amrnb-dev libopencore-amrnb0 libopencore-amrwb-dev libopencore-amrwb0 libswscale-dev libtheora-dev libvorbis-dev libx264-dev libxvidcore-dev yasm libeigen3-dev unzip libqt4-dev libqt4-opengl-dev vim screen
+  b- sudo apt-get install -y build-essential cmake pkg-config libpng12-0 libpng12-dev libpng++-dev libpng3 libpnglite-dev zlib1g-dbg zlib1g zlib1g-dev pngtools libtiff4-dev libtiff4 libtiffxx0c2 libtiff-tools libjpeg8 libjpeg8-dev libjpeg8-dbg libjpeg-progs ffmpeg libavcodec-dev libavcodec53 libavformat53 libavformat-dev libgstreamer0.10-0-dbg libgstreamer0.10-0  libgstreamer0.10-dev libxine1-ffmpeg  libxine-dev libxine1-bin libunicap2 libunicap2-dev libdc1394-22-dev libdc1394-22 libdc1394-utils swig libv4l-0 libv4l-dev libgtk2.0-dev pkg-config libogg-dev libopencore-amrnb-dev libopencore-amrnb0 libopencore-amrwb-dev libopencore-amrwb0 libswscale-dev libtheora-dev libvorbis-dev libx264-dev libxvidcore-dev yasm libeigen3-dev unzip libqt4-dev libqt4-opengl-dev vim screen libgstreamer-plugins-base0.10-dev libgstreamer-plugins-base0.10-0
   
 4- download OpenCV from http://opencv.org/downloads.html
   a- unzip the archive
   
   b- cd opencv<version> ; mkdir release ; cd release
   
-  c- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_V4L=ON -D WITH_GSTREAMER=ON -D WITH_OPENEXR=ON -D WITH_UNICAP=ON -D INSTALL_C_EXAMPLES=ON -D BUILD_EXAMPLES=ON ..
+  c- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_OPENGL=ON -DWITH_XINE=ON -D WITH_V4L=ON -D WITH_GSTREAMER=ON -D WITH_OPENEXR=ON -D WITH_UNICAP=ON -D INSTALL_C_EXAMPLES=ON -D BUILD_EXAMPLES=ON ..
   
     c.1- If you want QT instead of GTK
-      c.1.1- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_V4L=ON -D WITH_GSTREAMER=ON -D WITH_OPENEXR=ON -D WITH_UNICAP=ON -D INSTALL_C_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON ..
+      c.1.1- -D WITH_QT=ON
   
   d- make -j4
   
