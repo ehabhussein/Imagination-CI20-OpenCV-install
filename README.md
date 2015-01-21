@@ -39,4 +39,6 @@ To get webcam support:
     g.1- /usr/local/lib
     g.2- save and exit ":wq"
     g.3- sudo ldconfig
-    
+
+5- compile your code:
+  a- gcc `pkg-config --cflags --libs opencv` -o woot woot.c
