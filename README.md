@@ -29,9 +29,9 @@ To get webcam support:
     c.1- If you want QT instead of GTK
       c.1.1- cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local -D WITH_V4L=ON -D WITH_GSTREAMER=ON -D WITH_OPENEXR=ON -D WITH_UNICAP=ON -D INSTALL_C_EXAMPLES=ON -D BUILD_EXAMPLES=ON -D WITH_QT=ON ..
   
-  d- go for a long break
+  d- make -j4
   
-  e- make
+  e-  go for a long break
   
   f- sudo make install
   
