@@ -42,5 +42,11 @@ To get webcam support:
     g.2- save and exit ":wq"
     g.3- sudo ldconfig
 
-5- compile your code:
-  a- gcc `pkg-config --cflags --libs opencv` -o woot woot.c
+5- Enable C++11 Support '-std=c++11'
+  a- sudo apt-get install g++-4.7 g++-4.7-multilib libstdc++6-4.7-dbg
+  b- unlink /usr/bin/gcc ; unlink /usr/bin/g++
+  c- ln -s /usr/bin/gcc-4.7 /usr/bin/gcc ; ln -s /usr/bin/g++-4.7 /usr/bin/g++
+  
+6- compile your code
+  a- g++ -std=c++11 `pkg-config --cflags --libs opencv` -o woot woot.c
+  
